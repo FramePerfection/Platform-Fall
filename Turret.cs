@@ -86,6 +86,7 @@ namespace Unstable
             if (scene.instancers.TryGetValue(GetType(), out myInstancer))
                 myInstancer.instancedThings.Remove(this);
             scene.shader.lights.Remove(l);
+            txt.Dispose();
         }
     }
 }

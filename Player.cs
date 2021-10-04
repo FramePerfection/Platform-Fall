@@ -402,6 +402,9 @@ namespace Unstable
         {
             base.DoDispose();
             scene.physics.Remove(physics);
+            retryText.Dispose();
+            deathCounter.Dispose();
+            timerText.Dispose();
         }
     }
 }

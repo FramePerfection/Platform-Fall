@@ -81,5 +81,11 @@ namespace Unstable
             frontTxt.UpdateText(scene.game.defaultFont, txt.geometry.text, txt.geometry.align);
             scene.materialTexts.Add(frontTxt);
         }
+
+        protected override void DoDispose()
+        {
+            base.DoDispose();
+            frontTxt.Dispose();
+        }
     }
 }

@@ -97,5 +97,11 @@ namespace Unstable
                 scene.materialTexts.Add(t);
             }
         }
+        protected override void DoDispose()
+        {
+            base.DoDispose();
+            leftSideTex.Dispose();
+            rightSideText.Dispose();
+        }
     }
 }

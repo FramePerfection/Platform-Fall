@@ -27,5 +27,11 @@ namespace Unstable
             scene.worldTexts.Add(text);
             scene.materialTexts.Add(text);
         }
+
+        protected override void DoDispose()
+        {
+            base.DoDispose();
+            text.Dispose();
+        }
     }
 }

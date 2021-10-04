@@ -102,6 +102,7 @@ namespace Unstable
         protected override void DoDispose()
         {
             base.DoDispose();
+            txt.Dispose();
             scene.physics.Remove(physics);
             InstancingManager<WorldScene> myInstancer;
             if (scene.instancers.TryGetValue(GetType(), out myInstancer))
